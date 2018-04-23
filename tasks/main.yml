@@ -1,0 +1,12 @@
+---
+# tasks file for alpine_postgresql
+- name: install postgresql
+  apk:
+    name: postgresql
+    state: present
+    update_cache: no
+
+- name: install psycopg2
+  pip:
+    name: psycopg2
+    state: present
